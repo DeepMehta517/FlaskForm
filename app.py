@@ -5,5 +5,8 @@ app = Flask(__name__,template_folder='templates',)
 def hello_world():
     return render_template('form.html')
 
-if __name__ == "__main__":
-    app.run(debug=True)
+@app.route('/thankyou')
+def thnx() :
+    return render_template('Thankyou.html')   
+
+app.run(debug=True)
